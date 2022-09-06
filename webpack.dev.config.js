@@ -9,6 +9,7 @@ module.exports = {
 		filename: 'bundle.js',
 	},
 	mode: 'development',
+	devtool: 'source-map',
 	devServer: {
 		port: 3000,
 		hot: true, // reload only the component that changed, not the full page
