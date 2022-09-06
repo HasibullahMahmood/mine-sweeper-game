@@ -25,6 +25,17 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(png|jpg|gif)$/i,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+						},
+					},
+				],
+			},
+			{
 				test: /\.(jpg|png)$/,
 				// type: 'asset/resource', // bundles as file
 				// type: 'asset/inline', // bundles with js as base64 -> good for small sized files like svg's
@@ -37,20 +48,11 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [
-					// 'style-loader',
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-				],
+				use: [MiniCssExtractPlugin.loader, 'css-loader'],
 			},
 			{
 				test: /\.scss$/,
-				use: [
-					// 'style-loader',
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'sass-loader',
-				],
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(ts)x?$/,

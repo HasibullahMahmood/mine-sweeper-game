@@ -24,6 +24,17 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(png|jpg|gif)$/i,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+						},
+					},
+				],
+			},
+			{
 				test: /\.(jpg|png)$/,
 				// type: 'asset/resource', // bundles as file
 				// type: 'asset/inline', // bundles with js as base64 -> good for small sized files like svg's
