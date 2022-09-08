@@ -4,4 +4,13 @@ module.exports = {
 		'@babel/preset-typescript',
 		'@babel/preset-react',
 	],
+	plugins: [
+		[
+			'babel-plugin-root-import',
+			{
+				rootPathSuffix: './src',
+				rootPathPrefix: '@/',
+			},
+		],
+	],
 }
