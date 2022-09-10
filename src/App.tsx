@@ -1,13 +1,8 @@
 import React from 'react'
-import { generateField } from './utils/field'
-import { Legend } from './components/Legend'
+// import { Legend } from './components/legend/Legend'
 
 const App = () => {
-	return (
-		<div>
-			<Legend />
-		</div>
-	)
+	return <div>{/* <Legend /> */}</div>
 }
 
 export default App
